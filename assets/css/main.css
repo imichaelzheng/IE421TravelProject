@@ -601,6 +601,8 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		height: 30px;
+		width: 30px;
 	}
 
 		.icon:before {
