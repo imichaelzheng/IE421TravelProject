@@ -601,8 +601,8 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
-		height: 30px;
-		width: 30px;
+		/*height: 30px;
+		width: 30px;*/
 	}
 
 		.icon:before {
@@ -1271,8 +1271,8 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
+			width: 10.5rem;
+			height: 10.5rem;
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
