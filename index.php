@@ -308,12 +308,15 @@
 						<!-- User -->
 							<article id="userID">
 								<h2 class="major">Account Control Panel</h2>
-								<ul>
+								
+								<?php includ('Backend2/Welcome.php'); ?>
+
+								<!-- <ul>
 									<li><a href="#">Log Out</a></li>
 									<li><a href="#addstore">Add New Restaurant</a></li>
 									<li><a href="#">Change Email</a></li>
 									<li><a href="#">Change Password</a></li>
-								</ul>
+								</ul> -->
 							</article>
 
 						<!-- Add Restaurant -->

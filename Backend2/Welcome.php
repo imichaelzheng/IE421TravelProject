@@ -21,8 +21,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["company_name"]); ?></b>. Welcome to your company control panel.</h1>
+        <h3>Hi, <b><?php echo htmlspecialchars($_SESSION["company_name"]); ?></b>. Welcome to your company control panel.</h3>
     </div>
+    <p>Your current phone number: <?php echo htmlspecialchars($_SESSION["phone"]); ?></p>
+    <p>Your current address: <?php echo htmlspecialchars($_SESSION["address"]); ?></p>
     <ul>
 		<li><a href="Logout.php">Log Out</a></li>
 		<li><a href="#addstore">Add New Restaurant</a></li>
