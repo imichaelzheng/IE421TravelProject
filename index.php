@@ -106,7 +106,10 @@
 							<article id="login">
 								<h2 class="major">Login/Register for Companies</h2>
 								<h3>Log In</h3>
-								<form method="post" action="#">
+
+								<?php include('Backend2/Login.php'); ?>
+
+								<!-- <form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="email">Email</label>
@@ -133,7 +136,7 @@
 									<ul class="actions">
 										<li><input type="submit" value="Register" class="primary"/></li>
 									</ul>
-								</form>
+								</form> -->
 							</article>
 
 						<!-- Contact -->
