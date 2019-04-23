@@ -175,7 +175,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!-- HTML ORIGINAL FORM
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form method="post" action="#">
 	    	<div class="fields">
 				<div class="field half">
 					<label for="company">Company Name</label>
