@@ -120,6 +120,10 @@
 									<ul class="actions">
 										<li><input type="submit" value="Log In" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<form method="get" action="#forgot">
+									<ul class="actions">
 										<li><input type="submit" value="Forgot Password" /></li>
 									</ul>
 									<hr />
@@ -201,6 +205,7 @@
 									</div>
 									<hr />
 									<h3>Payment Information</h3>
+									<p>Note: For website testing purposes, account creation will be free.</p>
 									<br>
 									<div class="fields">
 										<div class="field half">
@@ -296,15 +301,89 @@
 						<!-- User -->
 							<article id="userID">
 								<h2 class="major">User Control Panel</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>User home page and controls</p>
+								<ul>
+									<li><a href="#">Log Out</a></li>
+									<li><a href="#addstore">Add New Restaurant</a></li>
+									<li><a href="#">Change Email</a></li>
+									<li><a href="#">Change Password</a></li>
+								</ul>
 							</article>
 
 						<!-- Add Restaurant -->
 							<article id="addstore">
 								<h2 class="major">Add New Restaurant</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Add your restaurant</p>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<select data-trigger="" name="choices-single-defaul">
+												<option placeholder="" value="">Type of Restaurant</option>
+												<option>Bar</option>
+												<option>Hotel</option>
+												<option>Sit Down</option>
+												<option>To Go</option>
+												<option>Fast Food</option>
+												<option>Fine Dining</option>
+											</select>
+										</div>
+										<div class="field half">
+												<select data-trigger="" name="choices-single-defaul">
+													<option placeholder="" value="">Type of Food</option>
+													<option>American</option>
+													<option>Chinese</option>
+													<option>Japanese</option>
+													<option>Mexican</option>
+													<option>Thai</option>
+													<option>Vietnamese</option>
+													<option>French</option>
+													<option>German</option>
+													<option>Mediterranean</option>
+													<option>Caribbean</option>
+												</select>
+											</div>
+										<div class="field half">
+											<select data-trigger="" name="choices-single-defaul">
+												<option placeholder="" value="">Price Range</option>
+												<option>$</option>
+												<option>$$</option>
+												<option>$$$</option>
+											</select>
+										</div>
+										<div class="field half">
+											<label for="rating">Rating (0-5)</label>
+											<input type="text"  name="rating" id="rating" />
+										</div>
+										<div class="field half">
+											<label for="address">Location Address</label>
+											<input type="text" name="address" id="address"/>
+										</div>
+										<div class="field half">
+											<label for="hours">Business Hours (Use military time)</label>
+											<input type="text" name="hours" id="hours" />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Add Restaurant" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- Forgot password -->
+							<article id="forgot">
+								<h2 class="major">Forgot Password</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="email">Enter Account Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send New Password" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+									<p>A new password will be sent you your email. Click the link in the email to create a new custom password.</p>
+								</form>
 							</article>
 
 						<!-- Elements -->
