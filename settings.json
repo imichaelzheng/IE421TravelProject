@@ -3,6 +3,6 @@
     "liveServer.settings.proxy": {
         "enable": true,
         "baseUri": "/",
-        "proxyUri": "http://127.0.0.1/IE421TravelProject/"
+        "proxyUri": "http://127.0.0.1/index.php/"
     },
 }
