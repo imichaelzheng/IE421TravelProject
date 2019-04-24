@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="Frontend/css/main.css" />
 		<noscript><link rel="stylesheet" href="Frontend/css/noscript.css" /></noscript>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
 body {margin:0;}
 
@@ -88,6 +88,10 @@ body {margin:0;}
     text-align: left;
   }
 
+}
+
+.forumnav {
+  float: right;
 }
     </style>
 
@@ -601,8 +605,11 @@ body {margin:0;}
               <article id="actions">
                 <h2 class="majopr">Business Account Controls</h2>
                 <p>These controls are only available for accounts upgraded to verified business accounts.</p>
-                <a href="#addstore" class="button">Add a Restaurant</a>
-                <a href="#edit" class="button">View and Edit Active Restaurants</a>
+                <ul>
+                <li><a href="#addstore" class="button">Add a Restaurant</a></li><br>
+                <li><a href="#edit" class="button">View and Edit Active Restaurants</a></li>
+                </ul>
+                <br>
                 <a href="#userID" class="button">Return to Account Page</a>
               </article>
 
@@ -620,27 +627,27 @@ body {margin:0;}
 											</thead>
 											<tbody>
 												<tr>
-													<td>General Discussion</td>
+													<td><a href="#cat1">General Discussion</a></td>
 													<td>Thread1</td>
-													<td>5</td>
+													<td>10</td>
 												</tr>
 												<tr>
-													<td>Specific Restaurants</td>
+													<td><a href="#cat2">Specific Restaurants</a></td>
 													<td>Thread2</td>
 													<td>2</td>
 												</tr>
 												<tr>
-													<td>Discussion by Area</td>
+													<td><a href="#cat3">Discussion by Area</a></td>
 													<td>Thread3</td>
 													<td>7</td>
 												</tr>
 												<tr>
-													<td>Favorite Foods</td>
+													<td><a href="#cat4">Favorite Foods</a></td>
 													<td>Thread4</td>
 													<td>1</td>
 												</tr>
 												<tr>
-													<td>Off-Topic</td>
+													<td><a href="#cat5">Off-Topic</a></td>
 													<td>Thread5</td>
 													<td>3</td>
 												</tr>
@@ -648,6 +655,126 @@ body {margin:0;}
                     </table>
                   </div>
               </article>
+
+              <!-- Forum Categories -->
+              <article id="cat1">
+                  <h2 class="major">General Discussion Forum</h2>
+                  <a href="#forum">Return to Main Forum</a>
+                  <div class="forumnav"><a href="#newthread">Start a New Thread</a></div>
+                  <br><br>
+                  <div class="table-wrapper">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Thread Name</th>
+                            <th>Most Recent Poster</th>
+                            <th>Posts</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="#thread1">The first thread</a></td>
+                            <td>David</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Example Thread</a></td>
+                            <td>Trice</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Another Example</a></td>
+                            <td>Trice</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Stuff</a></td>
+                            <td>Michael</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Welcome</a></td>
+                            <td>Trice</td>
+                            <td>1</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </article>
+
+                <!-- Forum Threads -->
+                <article id="thread1">
+                  <h3 class="major">Thread Name: The first thread</h3>
+                  <a href="#cat1">Return to General Discussion</a>
+                  <br><br>
+                  <div class="table-wrapper">
+                      <table class="alt">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Message</th>
+                            <th>Post Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>David<i class='far fa-check-circle' style='font-size:20px; color:green'></i></i></td>
+                            <td>Hi everybody, welcome to the Hungry Search forum. Feel free to post anything that comes to mind!</td>
+                            <td>4/24/2019</td>
+                          </tr>
+                          <tr>
+                              <td>Trice</td>
+                              <td>Hey there David</td>
+                              <td>4/24/2019</td>
+                            </tr>
+                            <tr>
+                                <td>Michael</td>
+                                <td>Pretty cool forum</td>
+                                <td>4/24/2019</td>
+                              </tr>
+                              <tr>
+                                  <td>David<i class='far fa-check-circle' style='font-size:20px; color:green'></i></i></td>
+                                  <td>Yeah it's a great place to talk about our website and all the great restaurants</td>
+                                  <td>4/24/2019</td>
+                                </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <br>
+                      <b>Make a Post to This Thread</b>
+                      <form method="post" action="#">
+                          <div class="fields">
+                            <div class="field">
+                              <label for="message">Message</label>
+                              <textarea name="message" id="message" rows="4"></textarea>
+                            </div>
+                          </div>
+                          <ul class="actions">
+                            <li><input type="submit" value="Post" class="primary" /></li>
+                          </ul>
+                      </form>
+                </article>
+
+                <!-- New Thread -->
+                <article id="newthread">
+                  <h2 class="major">Start New Thread</h2>
+                  <form method="post" action="#">
+                      <div class="fields">
+                          <div class="field half">
+                              <label for="title">Thread Title</label>
+                              <input type="text" name="title" id="title" />
+                            </div>
+                        <div class="field">
+                          <label for="message">Message</label>
+                          <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                      </div>
+                      <ul class="actions">
+                        <li><input type="submit" value="Post" class="primary" /></li>
+                        <li><a href="#cat1" class="button">Cancel</a></li>
+                      </ul>
+                  </form>
+                </article>
 
             <!-- Edit Restaurants -->
               <article id="edit">
@@ -661,6 +788,7 @@ body {margin:0;}
 								<form method="post" action="#">
 									<div class="fields">
                     <div class="field half">
+                      <p>Select an image to represent your restaurant.</p>
                       <input type="file" name="pic" accept="image/*">
                     </div>
 										<div class="field half">
@@ -715,7 +843,7 @@ body {margin:0;}
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
-								<a href="#userID">Back to Account Control Panel</a>
+								<a href="#userID" class="button">Back to Account Control Panel</a>
 							</article>
 
 						<!-- Forgot password -->
