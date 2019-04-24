@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML5>
 <!--
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
@@ -6,12 +6,94 @@
 -->
 <html>
 	<head>
-		<title>Find the Exact Restaurant You Want</title>
+		<title>Hungry Search</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="Frontend/css/main.css" />
 		<noscript><link rel="stylesheet" href="Frontend/css/noscript.css" /></noscript>
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;  
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.navbar .icon {
+  display: none;
+} 
+
+.navbar ul {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			margin-bottom: 0;
+			list-style: none;
+			padding-left: 0;
+			border: solid 1px #ffffff;
+      border-radius: 4px;
+		}
+
+			.navbar ul li {
+				padding-left: 0;
+				border-left: solid 1px #ffffff;
+			}
+
+				.navbar ul li:first-child {
+					border-left: 0;
+				}
+
+				.navbar ul li a {
+					display: block;
+					min-width: 7.5rem;
+					height: 2.75rem;
+					line-height: 2.75rem;
+					padding: 0 1.25rem 0 1.45rem;
+					text-transform: uppercase;
+					letter-spacing: 0.2rem;
+					font-size: 0.8rem;
+					border-bottom: 0;
+				}
+
+					.navbar ul li a:hover {
+						background-color: rgba(255, 255, 255, 0.075);
+					}
+
+					.navbar ul li a:active {
+						background-color: rgba(255, 255, 255, 0.175);
+					}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+    </style>
+
 	</head>
 	<body class="is-preload">
 
@@ -20,9 +102,10 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<i class="icon-food" height="30" width="30"></i>
-						</div>
+						<!-- <div class="logo">
+              <i class="icon-food" height="30" width="30"></i> -->
+              <img src="images/Logo.png" alt="" />
+						<!--</div>-->
 						<div class="content">
 							<div class="inner">
 								<h1>The Best Dining Experience for Your Tastes</h1>
@@ -33,7 +116,8 @@
 								<li><a href="#search">Search</a></li>
 								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<li><a href="#login">Company Access</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#forum">Forum</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -42,6 +126,16 @@
 				<!-- Main -->
 					<div id="main">
 
+            <div class="navbar" id="myNavbar">
+              <a href="/#" class="button">Home</a>
+              <a href="/#search" class="button">Search</a>
+              <a href="/#about" class="button">About</a>
+              <a href="/#contact" class="button">Contact</a>
+              <a href="/#forum" class="button">Forum</a>
+              <a href="/#login" class="button">Login/Logout</a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>            
+            
 						<!-- Search -->
 							<article id="search">
 								<h2 class="major">Search</h2>
@@ -104,9 +198,9 @@
 
 						<!-- Login -->
 							<article id="login">
-								<h2 class="major">Login/Register for Companies</h2>
+								<h2 class="major">Login/Sign Up</h2>
 								<h3>Log In</h3>
-								<form method="post" action="#">
+								<form method="post" action="#userID">
 									<div class="fields">
 										<div class="field half">
 											<label for="email">Email</label>
@@ -127,13 +221,13 @@
 										<li><input type="submit" value="Forgot Password" /></li>
 									</ul>
 									<hr />
-									<h3>Don't have an account? Register today!</h3>
+									<h3>Don't have an account? Sign up today!</h3>
 								</form>
 								<form method="get" action="#register">
 									<ul class="actions">
-										<li><input type="submit" value="Register" class="primary"/></li>
+										<li><input type="submit" value="Sign Up" class="primary"/></li>
 									</ul>
-								</form> 
+                </form> 
 							</article>
 
 						<!-- Contact -->
@@ -175,25 +269,24 @@
 
 							<article id="register">
 								<h2 class="major">Register</h2>
-								<p>Registration of your company requires a $50/year subscription to our marketing services.</p>
 								
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
-											<label for="company">Company Name</label>
-											<input type="text" name="company" id="company" />
+											<label for="username">Username</label>
+											<input type="text" name="username" id="username" />
 										</div>
 										<div class="field half">
-											<label for="email">Company Email</label>
+											<label for="email">Email</label>
 											<input type="email" name="email" id="email" />
 										</div>
 										<div class="field half">
-											<label for="address">Primary Address</label>
-											<input type="text" name="address" id="address" />
+											<label for="zip">Primary Zip Code</label>
+											<input type="text" name="zip" id="zip" />
 										</div>
 										<div class="field half">
 											<label for="phone">Primary Phone</label>
-											<input type="tel" name="phone" id="phone" />
+											<input type="text" name="phone" id="phone" />
 										</div>
 										<div class="field half">
 											<label for="pwd">Password</label>
@@ -204,32 +297,13 @@
 											<input type="password" name="pwd2" id="pwd2" />
 										</div>
 									</div>
-									<hr />
-									<h3>Payment Information</h3>
-									<p>Note: For website testing purposes, account creation will be free.</p>
-									<p>Do not enter any card information in the fields below.</p>
-									<br>
-									<div class="fields">
-										<div class="field half">
-											<label for="cc">Credit Card Number</label>
-											<input type="text" name="cc" id="cc" />
-										</div>
-										<div class="field half">
-											<label for="CVV">CVV Code</label>
-											<input type="text" name="CVV" id="CVV" />
-										</div>
-										<div class="field half">
-											<label for="date">Expiration Date</label>
-											<input type="date" name="date" id="date" />
-										</div>
-									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Register and Pay" class="primary" /></li>
+										<li><input type="submit" value="Register" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form> 
 							</article>
-
+              
 						<!-- Results -->
 							<article id="results">
 								<h2 class="major">Search Results (6)</h2>
@@ -303,14 +377,72 @@
 						<!-- User -->
 							<article id="userID">
 								<h2 class="major">Account Control Panel</h2>
-
+                <h3>Hi, User. Welcome to your account page.</h3>
 								<ul>
-									<li><a href="#">Log Out</a></li>
-									<li><a href="#addstore">Add New Restaurant</a></li>
-									<li><a href="#">Change Email</a></li>
-									<li><a href="#">Change Password</a></li>
+                  <li><a href="#" class="button">Change Email</a></li><br>
+                  <li><a href="#" class="button">Change Password</a></li><br>
+                  <li><a href="#upgrade" class="button">Become a Verified Business/Restaurant</a></li><br>
+                  <li><a href="#actions" class="button">Tools for Verified Businesses</a></li>
 								</ul> 
 							</article>
+
+            <!-- Upgrade to Business -->
+              <article id="upgrade">
+                <h2 class="major">Upgrade to Business Account</h2>
+                <p>Pay here</p>
+              </article>
+
+            <!-- Tools for Business -->
+              <article id="actions">
+                <h2 class="majopr">Business Account Controls</h2>
+                <p>These are the controls for business accounts</p>
+                <a href="#addstore">Add a Restaurant</a>
+                <b>ETC.</b>
+              </article>
+
+            <!-- Forum -->
+              <article id="forum">
+                <h2 class="major">Community Forum</h2>
+                <div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Category</th>
+													<th>Most Recent Thread</th>
+													<th>Posts</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>General Discussion</td>
+													<td>Thread1</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td>Specific Restaurants</td>
+													<td>Thread2</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>Discussion by Area</td>
+													<td>Thread3</td>
+													<td>7</td>
+												</tr>
+												<tr>
+													<td>Favorite Foods</td>
+													<td>Thread4</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Off-Topic</td>
+													<td>Thread5</td>
+													<td>3</td>
+												</tr>
+											</tbody>
+                    </table>
+                  </div>
+              </article>
+
 
 						<!-- Add Restaurant -->
 							<article id="addstore">
@@ -630,14 +762,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</form>
 								</section>
 
-							</article>
+              </article>
+              
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myNavbar");
+                if (x.className === "navbar") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "navbar";
+                }
+              }
+            </script>
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+						<h6>Updated April 2019 | Knoxville, Tennessee</h6>
+					</footer> 
 
 			</div>
 
