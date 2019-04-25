@@ -1,4 +1,4 @@
-<?php
+<?php /*
 $app->post('/api/login', function ($request, $response, $args) { //POST example
     $pdo =$this->pdo;
     $params = $request->getParsedBody();
@@ -51,5 +51,5 @@ $app->post('/api/chgpwd', function ($request, $response, $args) { //POST example
 	$pdo = null;
 	return $response;
 });
-
+*/
 ?>

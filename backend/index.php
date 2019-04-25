@@ -1,4 +1,4 @@
-<?php
+<?php /*
 
 require 'vendor/autoload.php';
 
@@ -42,3 +42,5 @@ $app->add(function ($req, $res, $next) {
 });
 
 $app->run();
+*/
+?>

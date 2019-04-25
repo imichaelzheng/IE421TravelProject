@@ -1,4 +1,4 @@
-<?php
+<?php /*
 $app->post('/api/profile', function ($request, $response, $args) { //POST example
     $pdo =$this->pdo;
     $params = $request->getParsedBody();
@@ -24,5 +24,5 @@ $app->post('/api/profile', function ($request, $response, $args) { //POST exampl
 	$pdo = null;
     return $response;
 });
-
+*/
 ?>

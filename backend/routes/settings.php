@@ -1,4 +1,4 @@
-<?php
+<?php /*
 
 
 $app->get('/api/settings', function ($request, $response, $args) { // GET Example without database
@@ -11,5 +11,5 @@ $app->get('/api/settings', function ($request, $response, $args) { // GET Exampl
 	return $response;
 });
 
-
+*/
 ?>
